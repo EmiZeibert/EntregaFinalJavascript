@@ -79,11 +79,11 @@ function eliminarDelcarrito(e) {
     localStorage.setItem("productos-elegidos", JSON.stringify(productoElegidos));
 }
 
-vaciarCarrito.addEventListener("click",carritovaciar);
+vaciarCarrito.addEventListener("click", carritovaciar);
 function carritovaciar() {
-    productoElegidos.length =0;
+    productoElegidos.length = 0;
     localStorage.setItem("productos-elegidos", JSON.stringify(productoElegidos));
-    productosCarrito();  
+    productosCarrito();
 }
 
 function actTotal() {
@@ -103,5 +103,24 @@ function comprarCarrito() {
 
 }
 
+const lista = document.querySelector("#boton-info");
+lista.addEventListener("click", masInfo);
+function masInfo() {
+    
+        fetch("/productosl.json")
+        .then((res) => res.json())
+        .then((data) => {
+            data.forEach((producto) => {
+                const li = document.createElement('li')
+                li.innerHTML = `
+                        <p>${producto.direccion}</p>
+                        <p>${producto.telefono}</p>
+                        `
+                lista.append(li)
+             
+            })
+        })
+    }
+  
 
 

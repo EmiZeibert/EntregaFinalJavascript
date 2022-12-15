@@ -238,3 +238,10 @@ a {
     text-decoration: none;
     color: rgb(102, 66, 160);
 }
+.boton-info{
+    background-color:transparent;
+    border: none;
+    color: rgb(102, 66, 160);
+        list-style-type: none;
+        text-align: start;
+}

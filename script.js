@@ -1,6 +1,8 @@
+
+
 const productos = [
     {
-        id: "notebook-Exo",
+        id:"notebook-Exo",
         titulo: "Notebook Exo",
         imagen: "../imagenes/notebook65000.jpg",
                 categoria: {
@@ -10,7 +12,7 @@ const productos = [
         precio: 85000
     },
     {
-        id: "notebook-Acer",
+        id:"notebook-Acer",
         titulo: "Notebook Acer",
         imagen: "../imagenes/notebook85000.jpg",
                 categoria: {
@@ -20,7 +22,7 @@ const productos = [
         precio: 65000
     },
     {
-        id: "parlante-Chico",
+        id:"parlante-Chico",
         titulo: "Parlante Chico",
         imagen: "../imagenes/parlante10500.jpg",
                 categoria: {
@@ -30,7 +32,7 @@ const productos = [
         precio: 10500
     },
     {
-        id: "parlante-Grande",
+        id:"parlante-Grande",
         titulo: "Parlante Grande",
         imagen: "../imagenes/parlante20000.jpg",
                 categoria: {
@@ -40,7 +42,7 @@ const productos = [
         precio: 20600
     },
     {
-        id: "celular-Samsung A03",
+        id:"celular-SamsungA03",
         titulo: "Celular SamsungA03",
         imagen: "../imagenes/samsunga03.jpg",
        
@@ -51,7 +53,7 @@ const productos = [
         precio: 52000
     },
     {
-        id: "celular-Motorola-e20",
+        id:"celular-MotorolaE20",
         titulo: "Celular MotorolaE20",
         imagen: "../imagenes/motorolae20.jpg",
                 categoria: {
@@ -61,7 +63,7 @@ const productos = [
         precio: 34000
     },
     {
-        id: "smartv-43p",
+        id:"smartv-43p",
         titulo: "Smartv 43p",
         imagen: "../imagenes/smart43.jpg",
         
@@ -72,7 +74,7 @@ const productos = [
         precio: 73000
     },
     {
-        id: "smartv-32p",
+        id:"smartv-32p",
         titulo: "Smartv 32p",
         imagen: "../imagenes/smart32.jpg",
                 categoria: {
@@ -82,7 +84,7 @@ const productos = [
         precio: 45000
     },
     {
-        id: "auricular-Newvision",
+        id:"auricular-Newvision",
         titulo: "Auricular Newvision",
         imagen: "../imagenes/auricular2500.jpg",
                 categoria: {
@@ -92,7 +94,7 @@ const productos = [
         precio: 2500
     },
     {
-        id: "auricular-Redragon",
+        id:"auricular-Redragon",
         titulo: "Auricular Redragon",
         imagen: "../imagenes/auricular5000.jpg",
         
@@ -103,7 +105,7 @@ const productos = [
         precio: 5000
     },
     {
-        id: "tablet-Philips",
+        id:"tablet-Philips",
         titulo: "Tablet Philips",
         imagen: "../imagenes/tablet45000.jpg",
         categoria: {
@@ -113,7 +115,7 @@ const productos = [
         precio: 45000
     },
     {
-        id: "tablet-Lenovo",
+        id:"tablet-Lenovo",
         titulo: "Tablet Lenovo",
         imagen: "../imagenes/tablet54000.jpg",
         categoria: {
@@ -218,5 +220,25 @@ contenedorProductos.addEventListener("click", () => {
         icon: 'success'
            })
 })
+const lista = document.querySelector("#boton-info");
 
-
+lista.addEventListener("click", masInfo);
+function masInfo() {
+    
+        fetch("/productosl.json")
+        .then((res) => res.json())
+        .then((data) => {
+            data.forEach((listas) => {
+                const li = document.createElement('li')
+                li.innerHTML = `
+                        <li>${listas.direccion}</li>
+                        <li>${listas.telefono}</li>
+                        `
+                lista.append(li);
+                
+            })
+         
+        })
+       
+    }
+    
