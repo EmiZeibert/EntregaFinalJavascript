@@ -15,7 +15,7 @@
     font-size: 2rem;
 }
 
-.boton-filtro > button {
+.boton-filtro>button {
     display: flex;
     flex-direction: column;
 
@@ -47,7 +47,7 @@ aside {
     margin-bottom: 2rem;
 }
 
-.footer {
+footer {
     color: rgb(12, 11, 11);
     font-family: 'Bebas Neue', cursive;
     font-size: 1rem;
@@ -120,7 +120,7 @@ i.bi-hand-index-thumb {
     color: black;
     padding: .5rem;
     border-radius: 1rem;
-    width: 75%;
+    width: 74%;
     margin-top: -2rem;
     position: relative;
 
@@ -170,10 +170,12 @@ i.bi-hand-index-thumb {
     padding: .5rem;
     border-radius: 10px;
 }
+
 .carrito-eliminar {
     color: red;
     height: 3.5rem;
 }
+
 .carrito-accion-vaciar {
     border: 0;
     padding: 1rem;
@@ -181,12 +183,13 @@ i.bi-hand-index-thumb {
     cursor: pointer;
     border-bottom-right-radius: 1rem;
     border-bottom-left-radius: 1rem;
-    }
-    .carrito-vacio{
-        font-family: 'Nunito Sans', sans-serif;
+}
+
+.carrito-vacio {
+    font-family: 'Nunito Sans', sans-serif;
     font-size: 1rem;
     color: red;
-    }
+}
 
 .carrito-productos img {
     width: 6rem;
@@ -238,10 +241,14 @@ a {
     text-decoration: none;
     color: rgb(102, 66, 160);
 }
-.boton-info{
-    background-color:transparent;
+
+.boton-info {
+    background-color: transparent;
     border: none;
     color: rgb(102, 66, 160);
-        list-style-type: none;
-        text-align: start;
+    list-style-type: none;
+    text-align: start;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: .7rem;
+    
 }

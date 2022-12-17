@@ -93,34 +93,49 @@ function actTotal() {
 
 comprarAhora.addEventListener("click", comprarCarrito);
 function comprarCarrito() {
-
-    productoElegidos.length = 0;
-    localStorage.setItem("productos-elegidos", JSON.stringify(productoElegidos));
-    contenedorCarritoVacio.classList.add("disabled");
-    contenedorCarritoProductos.classList.add("disabled");
-    contenedorCarritoAccion.classList.add("disabled");
-    contenedorCarritoComprado.classList.remove("disabled");
+    if (productoElegidos && productoElegidos.length > 0) {
+        productoElegidos.length = 0;
+        localStorage.setItem("productos-elegidos", JSON.stringify(productoElegidos));
+        contenedorCarritoVacio.classList.add("disabled");
+        contenedorCarritoProductos.classList.add("disabled");
+        contenedorCarritoAccion.classList.add("disabled");
+        contenedorCarritoComprado.classList.remove("disabled");
+    }
+    else {
+        contenedorCarritoVacio.classList.remove("disabled");
+        contenedorCarritoProductos.classList.add("disabled");
+        contenedorCarritoAccion.classList.add("disabled");
+        contenedorCarritoComprado.classList.add("disabled");
+    }
 
 }
 
+
 const lista = document.querySelector("#boton-info");
+
 lista.addEventListener("click", masInfo);
+
 function masInfo() {
-    
-        fetch("/productosl.json")
+
+    fetch("/listadt.json")
         .then((res) => res.json())
         .then((data) => {
-            data.forEach((producto) => {
+            data.forEach((listaDt) => {
                 const li = document.createElement('li')
                 li.innerHTML = `
-                        <p>${producto.direccion}</p>
-                        <p>${producto.telefono}</p>
-                        `
+                            <h4>Direccion:${listaDt.direccion}</h4>
+                            <p> Telefono:${listaDt.telefono}</p>
+                            <hr/>
+                            `
                 lista.append(li)
-             
+
             })
+
         })
-    }
+
+}
+
   
 
 
+    

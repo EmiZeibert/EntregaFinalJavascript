@@ -1,51 +1,50 @@
 
-
 const productos = [
     {
-        id:"notebook-Exo",
+        id: "notebook-Exo",
         titulo: "Notebook Exo",
         imagen: "../imagenes/notebook65000.jpg",
-                categoria: {
+        categoria: {
             nombre: "Celulares-notebook",
             id: "Celulares-notebook"
         },
         precio: 85000
     },
     {
-        id:"notebook-Acer",
+        id: "notebook-Acer",
         titulo: "Notebook Acer",
         imagen: "../imagenes/notebook85000.jpg",
-                categoria: {
+        categoria: {
             nombre: "Celulares-notebook",
             id: "Celulares-notebook"
         },
         precio: 65000
     },
     {
-        id:"parlante-Chico",
+        id: "parlante-Chico",
         titulo: "Parlante Chico",
         imagen: "../imagenes/parlante10500.jpg",
-                categoria: {
+        categoria: {
             nombre: "Audio-video",
             id: "Audio-video"
         },
         precio: 10500
     },
     {
-        id:"parlante-Grande",
+        id: "parlante-Grande",
         titulo: "Parlante Grande",
         imagen: "../imagenes/parlante20000.jpg",
-                categoria: {
+        categoria: {
             nombre: "Audio-video",
             id: "Audio-video"
         },
         precio: 20600
     },
     {
-        id:"celular-SamsungA03",
+        id: "celular-SamsungA03",
         titulo: "Celular SamsungA03",
         imagen: "../imagenes/samsunga03.jpg",
-       
+
         categoria: {
             nombre: "Celulares-notebook",
             id: "Celulares-notebook"
@@ -53,20 +52,20 @@ const productos = [
         precio: 52000
     },
     {
-        id:"celular-MotorolaE20",
+        id: "celular-MotorolaE20",
         titulo: "Celular MotorolaE20",
         imagen: "../imagenes/motorolae20.jpg",
-                categoria: {
+        categoria: {
             nombre: "Celulares-notebook",
             id: "Celulares-notebook"
         },
         precio: 34000
     },
     {
-        id:"smartv-43p",
+        id: "smartv-43p",
         titulo: "Smartv 43p",
         imagen: "../imagenes/smart43.jpg",
-        
+
         categoria: {
             nombre: "Audio-video",
             id: "Audio-video"
@@ -74,30 +73,30 @@ const productos = [
         precio: 73000
     },
     {
-        id:"smartv-32p",
+        id: "smartv-32p",
         titulo: "Smartv 32p",
         imagen: "../imagenes/smart32.jpg",
-                categoria: {
+        categoria: {
             nombre: "Audio-video",
             id: "Audio-video"
         },
         precio: 45000
     },
     {
-        id:"auricular-Newvision",
+        id: "auricular-Newvision",
         titulo: "Auricular Newvision",
         imagen: "../imagenes/auricular2500.jpg",
-                categoria: {
+        categoria: {
             nombre: "Audio-video",
             id: "Audio-video"
         },
         precio: 2500
     },
     {
-        id:"auricular-Redragon",
+        id: "auricular-Redragon",
         titulo: "Auricular Redragon",
         imagen: "../imagenes/auricular5000.jpg",
-        
+
         categoria: {
             nombre: "Audio-video",
             id: "Audio-video"
@@ -105,7 +104,7 @@ const productos = [
         precio: 5000
     },
     {
-        id:"tablet-Philips",
+        id: "tablet-Philips",
         titulo: "Tablet Philips",
         imagen: "../imagenes/tablet45000.jpg",
         categoria: {
@@ -115,7 +114,7 @@ const productos = [
         precio: 45000
     },
     {
-        id:"tablet-Lenovo",
+        id: "tablet-Lenovo",
         titulo: "Tablet Lenovo",
         imagen: "../imagenes/tablet54000.jpg",
         categoria: {
@@ -126,6 +125,8 @@ const productos = [
     }
 
 ];
+
+
 const contenedorProductos = document.querySelector("#contenedor-productos");
 const botonesCategoria = document.querySelectorAll(".boton-categoria");
 let agregarP = document.querySelectorAll(".producto-agregar");
@@ -150,9 +151,7 @@ function cargarProductos(elegirProductos) {
     })
     actBotones();
 }
-
 cargarProductos(productos);
-
 botonesCategoria.forEach(boton => {
     boton.addEventListener("click", (e) => {
 
@@ -172,7 +171,6 @@ botonesCategoria.forEach(boton => {
     })
 
 });
-
 function actBotones() {
     agregarP = document.querySelectorAll(".producto-agregar");
     agregarP.forEach(boton => {
@@ -203,10 +201,10 @@ function agregarAlCarrito(e) {
         productoAgregado.cantidad = 1;
         productoElegidos.push(productoAgregado);
     }
-    
+
     cantidadProductosCarrito();
     localStorage.setItem("productos-elegidos", JSON.stringify(productoElegidos));
-   
+
 }
 function cantidadProductosCarrito() {
     let cambioNumeros = productoElegidos.reduce((acc, producto) => acc + producto.cantidad, 0);
@@ -218,27 +216,14 @@ contenedorProductos.addEventListener("click", () => {
         title: 'Agregado',
         text: 'tu producto ya esta en el carrito!',
         icon: 'success'
-           })
+    })
 })
-const lista = document.querySelector("#boton-info");
 
-lista.addEventListener("click", masInfo);
-function masInfo() {
-    
-        fetch("/productosl.json")
-        .then((res) => res.json())
-        .then((data) => {
-            data.forEach((listas) => {
-                const li = document.createElement('li')
-                li.innerHTML = `
-                        <li>${listas.direccion}</li>
-                        <li>${listas.telefono}</li>
-                        `
-                lista.append(li);
-                
-            })
-         
-        })
-       
-    }
-    
+
+
+
+
+
+
+
+
