@@ -3,7 +3,7 @@ const productos = [
     {
         id: "notebook-Exo",
         titulo: "Notebook Exo",
-        imagen: "../imagenes/notebook65000.jpg",
+        imagen: "./imagenes/notebook65000.jpg",
         categoria: {
             nombre: "Celulares-notebook",
             id: "Celulares-notebook"
@@ -13,7 +13,7 @@ const productos = [
     {
         id: "notebook-Acer",
         titulo: "Notebook Acer",
-        imagen: "../imagenes/notebook85000.jpg",
+        imagen: "./imagenes/notebook85000.jpg",
         categoria: {
             nombre: "Celulares-notebook",
             id: "Celulares-notebook"
@@ -23,7 +23,7 @@ const productos = [
     {
         id: "parlante-Chico",
         titulo: "Parlante Chico",
-        imagen: "../imagenes/parlante10500.jpg",
+        imagen: "./imagenes/parlante10500.jpg",
         categoria: {
             nombre: "Audio-video",
             id: "Audio-video"
@@ -33,7 +33,7 @@ const productos = [
     {
         id: "parlante-Grande",
         titulo: "Parlante Grande",
-        imagen: "../imagenes/parlante20000.jpg",
+        imagen: "./imagenes/parlante20000.jpg",
         categoria: {
             nombre: "Audio-video",
             id: "Audio-video"
@@ -43,7 +43,7 @@ const productos = [
     {
         id: "celular-SamsungA03",
         titulo: "Celular SamsungA03",
-        imagen: "../imagenes/samsunga03.jpg",
+        imagen: "./imagenes/samsunga03.jpg",
 
         categoria: {
             nombre: "Celulares-notebook",
@@ -54,7 +54,7 @@ const productos = [
     {
         id: "celular-MotorolaE20",
         titulo: "Celular MotorolaE20",
-        imagen: "../imagenes/motorolae20.jpg",
+        imagen: "./imagenes/motorolae20.jpg",
         categoria: {
             nombre: "Celulares-notebook",
             id: "Celulares-notebook"
@@ -64,7 +64,7 @@ const productos = [
     {
         id: "smartv-43p",
         titulo: "Smartv 43p",
-        imagen: "../imagenes/smart43.jpg",
+        imagen: "./imagenes/smart43.jpg",
 
         categoria: {
             nombre: "Audio-video",
@@ -75,7 +75,7 @@ const productos = [
     {
         id: "smartv-32p",
         titulo: "Smartv 32p",
-        imagen: "../imagenes/smart32.jpg",
+        imagen: "./imagenes/smart32.jpg",
         categoria: {
             nombre: "Audio-video",
             id: "Audio-video"
@@ -85,7 +85,7 @@ const productos = [
     {
         id: "auricular-Newvision",
         titulo: "Auricular Newvision",
-        imagen: "../imagenes/auricular2500.jpg",
+        imagen: "./imagenes/auricular2500.jpg",
         categoria: {
             nombre: "Audio-video",
             id: "Audio-video"
@@ -106,7 +106,7 @@ const productos = [
     {
         id: "tablet-Philips",
         titulo: "Tablet Philips",
-        imagen: "../imagenes/tablet45000.jpg",
+        imagen: "./imagenes/tablet45000.jpg",
         categoria: {
             nombre: "Audio-video",
             id: "Audio-video"
@@ -116,7 +116,7 @@ const productos = [
     {
         id: "tablet-Lenovo",
         titulo: "Tablet Lenovo",
-        imagen: "../imagenes/tablet54000.jpg",
+        imagen: "./imagenes/tablet54000.jpg",
         categoria: {
             nombre: "Audio-video",
             id: "Audio-video"

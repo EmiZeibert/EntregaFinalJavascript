@@ -110,7 +110,6 @@ function comprarCarrito() {
 
 }
 
-
 const lista = document.querySelector("#boton-info");
 
 lista.addEventListener("click", masInfo);
@@ -132,10 +131,8 @@ function masInfo() {
             })
 
         })
-
 }
 
-  
 
 
-    
+
